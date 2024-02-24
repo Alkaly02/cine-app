@@ -15,7 +15,9 @@ export default TermsPrivacy
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
+        // position: "absolute",
+        // bottom: 0,
     },
     textCenter: {
         textAlign: "center",

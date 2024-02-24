@@ -1,10 +1,10 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import { appSystemDesign } from '../../constants/designSystem'
-import Logo from '../../components/Logo'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import TermsPrivacy from '../../components/TermsPrivacy'
+import YellowLogo from '../../components/YellowLogo'
 
 type VerificationType = {
     navigation: any
@@ -27,7 +27,7 @@ const Verification = ({ navigation }: VerificationType) => {
     return (
         <SafeAreaView style={safeAria}>
             <View style={container}>
-                <Logo />
+                <YellowLogo />
                 <View style={{ width: width - 80 }}>
                     <Text style={[textCenter, verify]}>Verify account</Text>
                     <Text style={[textCenter, checkEmail]}>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     verify: {
-        marginBottom: 20,
+        marginVertical: 20,
         fontSize: 20,
         fontWeight: "400"
     },
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     },
     question: {
         textAlign: "center",
+        marginTop: 10,
         marginBottom: 16,
         fontSize: 15
     },

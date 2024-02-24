@@ -1,11 +1,9 @@
 import { StatusBar, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Logo from '../../components/Logo'
-import Input from '../../components/Input'
-import Button from '../../components/Button'
 import { appSystemDesign } from '../../constants/designSystem'
 import AuthForm from '../../components/AuthForm'
+import YellowLogo from '../../components/YellowLogo'
 
 type LoginType = {
     navigation: any
@@ -18,7 +16,7 @@ const Login = ({ navigation }: LoginType) => {
 
     return <SafeAreaView style={safeAria}>
         <View style={container}>
-            <Logo />
+            <YellowLogo />
             <AuthForm
                 btnText="Login"
                 onPress={() => navigation.navigate("Verification")}

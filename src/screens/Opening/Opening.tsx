@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { appSystemDesign } from '../../constants/designSystem'
 import Logo from '../../components/Logo'
@@ -13,7 +13,7 @@ const Opening = ({ navigation }: OpeningType) => {
     return (
         <SafeAreaView style={safeAria}>
             <View style={container}>
-                <Logo />
+                <Logo logo={require("../../../assets/white.png")} />
                 <Button
                     title="Sign up with email"
                     btnContainer={btnContainer}
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
         marginTop: StatusBar.currentHeight || 0
     },
     btnContainer: {
+        marginTop: 10,
         borderWidth: 3,
         borderColor: appSystemDesign.colors.primary
     },

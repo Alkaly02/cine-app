@@ -1,23 +1,20 @@
-import { SafeAreaView, StatusBar, StyleSheet, useWindowDimensions, View } from 'react-native'
+import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native'
 import React from 'react'
-import Logo from '../../components/Logo'
-import Button from '../../components/Button'
 import { appSystemDesign } from '../../constants/designSystem'
-import Input from '../../components/Input'
 import TermsPrivacy from '../../components/TermsPrivacy'
 import AuthForm from '../../components/AuthForm'
+import YellowLogo from '../../components/YellowLogo'
 
 type CreateAccountType = {
     navigation: any
 }
 
 const CreateAccount = ({ navigation }: CreateAccountType) => {
-    const { width } = useWindowDimensions()
-    const { safeAria, container, btnWrapper, btnContainer, button } = styles
+    const { safeAria, container } = styles
     return (
         <SafeAreaView style={safeAria}>
             <View style={container}>
-                <Logo />
+                <YellowLogo />
                 <AuthForm
                     btnText="Create Account"
                     onPress={() => navigation.navigate("Verification")}
@@ -41,16 +38,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginTop: StatusBar.currentHeight || 0
     },
-    // formContainer: {
-    //     width:
-    // },
-    btnWrapper: {
-        marginTop: 30
-    },
-    btnContainer: {
-        backgroundColor: appSystemDesign.colors.secondary
-    },
-    button: {
-        color: appSystemDesign.colors.primary
-    }
 })
