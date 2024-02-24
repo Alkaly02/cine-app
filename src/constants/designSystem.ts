@@ -4,6 +4,7 @@ export interface AppSystemDesign {
     secondary: string;
     tercary: string;
     input: string;
+    verify: string;
   };
   borders: {
     radius: {
@@ -19,6 +20,7 @@ export const appSystemDesign: AppSystemDesign = {
     secondary: "#FFC121",
     tercary: "#000000",
     input: "#C2C2C2",
+    verify: "#353535",
   },
   borders: {
     radius: {

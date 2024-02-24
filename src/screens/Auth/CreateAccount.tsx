@@ -4,6 +4,8 @@ import Logo from '../../components/Logo'
 import Button from '../../components/Button'
 import { appSystemDesign } from '../../constants/designSystem'
 import Input from '../../components/Input'
+import TermsPrivacy from '../../components/TermsPrivacy'
+import AuthForm from '../../components/AuthForm'
 
 type CreateAccountType = {
     navigation: any
@@ -16,29 +18,12 @@ const CreateAccount = ({ navigation }: CreateAccountType) => {
         <SafeAreaView style={safeAria}>
             <View style={container}>
                 <Logo />
-                <View style={{ width: width - 50 }}>
-                    <Input
-                        text=''
-                        placeholder="Email"
-                        onChangeText={() => { }}
-                        icon="mail-outline"
-                    />
-                    <Input
-                        text=''
-                        placeholder="Password"
-                        onChangeText={() => { }}
-                        icon="lock-closed-outline"
-                    />
-                    <View style={btnWrapper}>
-                        <Button
-                            title="Create Account"
-                            btnContainer={btnContainer}
-                            textStyle={button}
-                            onPress={() => navigation.navigate("Verification")}
-                        />
-                    </View>
-                </View>
+                <AuthForm
+                    btnText="Create Account"
+                    onPress={() => navigation.navigate("Verification")}
+                />
             </View>
+            <TermsPrivacy />
         </SafeAreaView>
     )
 }

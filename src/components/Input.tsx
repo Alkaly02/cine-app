@@ -7,7 +7,7 @@ interface InputProps extends TextInputProps {
     text: string;
     placeholder: string;
     onChangeText: (text: string) => void;
-    icon: any
+    icon?: any
 }
 
 const Input: React.FC<InputProps> = ({ text, placeholder = "Enter text", onChangeText, icon }) => {
