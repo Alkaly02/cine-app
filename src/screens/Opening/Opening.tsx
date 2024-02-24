@@ -4,7 +4,11 @@ import { appSystemDesign } from '../../constants/designSystem'
 import Logo from '../../components/Logo'
 import Button from '../../components/Button'
 
-const Opening = () => {
+type OpeningType = {
+    navigation: any
+}
+
+const Opening = ({ navigation }: OpeningType) => {
     const { safeAria, container, btnContainer, button, text } = styles
     return (
         <SafeAreaView style={safeAria}>
@@ -14,7 +18,7 @@ const Opening = () => {
                     title="Sign up with email"
                     btnContainer={btnContainer}
                     textStyle={button}
-                    onPress={() => alert("Hello")}
+                    onPress={() => navigation.navigate("CreateAccount")}
                 />
                 <Text style={text}>Already have an account?</Text>
             </View>

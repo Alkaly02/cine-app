@@ -25,9 +25,10 @@ const styles = StyleSheet.create({
     button: {
         height: 70,
         // backgroundColor: "red",
+        alignItems: "center",
         justifyContent: "center",
         paddingHorizontal: 40,
-        borderRadius: 7
+        borderRadius: 10
     },
     toucheOpacity: {
         backgroundColor: "yellow",
