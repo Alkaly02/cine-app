@@ -4,8 +4,13 @@ import { appSystemDesign } from '../../constants/designSystem'
 import PaiementCardItem from '../../components/PaiementCardItem'
 import Button from '../../components/Button'
 import { FontAwesome } from '@expo/vector-icons'
+import FooterBtn from '../../components/FooterBtn'
 
-const Checkout = () => {
+type CheckoutType = {
+    navigation: any
+}
+
+const Checkout = ({ navigation }: CheckoutType) => {
     const {
         safeAria,
         container,
@@ -49,19 +54,10 @@ const Checkout = () => {
                         </View>
                     </Button>
                 </View>
-                <View style={footer}>
-                    <View style={totalContainer}>
-                        <Text style={totalText}>Total Price</Text>
-                        <Text style={totalText}>$38.00</Text>
-                    </View>
-                    <Button
-                        btnContainer={btnContainer}
-                        textStyle={button}
-                        onPress={() => { }}
-                    >
-                        <Text>Confirm</Text>
-                    </Button>
-                </View>
+                <FooterBtn
+                    btnText="Confirm"
+                    onPress={() => navigation.navigate({ name: "Payment" })}
+                />
             </View>
         </SafeAreaView>
     )
