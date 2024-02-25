@@ -5,6 +5,8 @@ export interface AppSystemDesign {
     tercary: string;
     input: string;
     verify: string;
+    activePaymentCardBg: string;
+    paymentCardBg: string;
   };
   borders: {
     radius: {
@@ -21,6 +23,8 @@ export const appSystemDesign: AppSystemDesign = {
     tercary: "#000000",
     input: "#C2C2C2",
     verify: "#353535",
+    activePaymentCardBg: "#151B3A",
+    paymentCardBg: "#F5F5F5",
   },
   borders: {
     radius: {

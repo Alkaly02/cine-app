@@ -28,11 +28,12 @@ const AuthForm = ({ btnText = "Click", onPress }: AuthFormType) => {
             />
             <View style={btnWrapper}>
                 <Button
-                    title={btnText}
                     btnContainer={btnContainer}
                     textStyle={button}
                     onPress={onPress}
-                />
+                >
+                    <Text>{btnText}</Text>
+                </Button>
             </View>
         </View>
     )

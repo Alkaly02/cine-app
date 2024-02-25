@@ -2,18 +2,18 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
 type ButtonProps = {
-    title: string,
+    children: React.ReactNode,
     btnContainer: object,
     textStyle: object,
     onPress: () => any
 }
 
-const Button = ({ btnContainer, textStyle, onPress, title = "Button" }: ButtonProps) => {
+const Button = ({ btnContainer, textStyle, onPress, children }: ButtonProps) => {
     const { button, text } = styles
     return (
         <TouchableOpacity onPress={onPress}>
             <View style={[button, btnContainer]}>
-                <Text style={[text, textStyle]}>{title}</Text>
+                <Text style={[text, textStyle]}>{children}</Text>
             </View>
         </TouchableOpacity>
     )

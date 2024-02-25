@@ -15,11 +15,12 @@ const Opening = ({ navigation }: OpeningType) => {
             <View style={container}>
                 <Logo logo={require("../../../assets/white.png")} />
                 <Button
-                    title="Sign up with email"
                     btnContainer={btnContainer}
                     textStyle={button}
                     onPress={() => navigation.navigate("CreateAccount")}
-                />
+                >
+                    <Text>Sign up with email</Text>
+                </Button>
                 <Text style={text}>Already have an account?</Text>
             </View>
         </SafeAreaView>

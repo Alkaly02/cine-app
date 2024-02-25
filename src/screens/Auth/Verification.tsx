@@ -45,12 +45,13 @@ const Verification = ({ navigation }: VerificationType) => {
                         Didn't get the code ?
                         <Text style={tryAgain}> Try again</Text>
                     </Text>
-                <Button
-                        title="Verify"
+                    <Button
                     btnContainer={btnContainer}
                     textStyle={button}
                         onPress={() => navigation.navigate("Login")}
-                    />
+                    >
+                        <Text>Verify</Text>
+                    </Button>
                 </View>
             </View>
             <TermsPrivacy />
